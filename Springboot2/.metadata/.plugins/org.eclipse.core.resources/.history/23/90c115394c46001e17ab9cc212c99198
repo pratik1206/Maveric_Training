@@ -1,0 +1,5 @@
+package com.kuka.Wishlist.service;
+
+public class UserNotFoundException {
+
+}

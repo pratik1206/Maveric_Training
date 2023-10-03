@@ -1,0 +1,58 @@
+package com.example.demo.config;
+
+
+import org.springframework.context.annotation.Configuration;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+
+
+@OpenAPIDefinition(
+info = @Info(
+
+title="Mentor Rest Service",
+description="REST Service to handle mentor related functionality",
+version = "1.0"
+)
+
+)
+public class UserConfig {
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	 @Bean
+//	    public Docket api() {
+//	        return new Docket(DocumentationType.SWAGGER_2)
+//	            .select()
+//	            .apis(RequestHandlerSelectors.basePackage("com.example.demo.Controller"))
+//	            .paths(PathSelectors.any())
+//	            .build()
+//	            .apiInfo(apiInfo());
+//	    }
+//
+//	    private ApiInfo apiInfo() {
+//	        return new ApiInfoBuilder()
+//	            .title("User API")
+//	            .description("API for managing user records")
+//	            .version("1.0")
+//	            .build();
+//	    }
+	
+	
+	
+	
+}

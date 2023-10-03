@@ -1,0 +1,5 @@
+package com.maveric.api.CommandLineRunner;
+
+public class MessageController {
+  
+}

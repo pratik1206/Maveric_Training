@@ -1,0 +1,13 @@
+
+…
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(¦‹Ÿ²8†Ãº–Ž1H‡RMAJORZ
+CODE_SMELL
+Š
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(—ÃÏàøÿÿÿÿ8úâ¾–Ž1H‹RMAJORZ
+CODE_SMELL
+…
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(Ò¿°“8€ç©–Ž1H‚RMAJORZ
+CODE_SMELL
+g
+java:S1128"4Remove this unused import 'java.util.stream.Stream'.(ó÷Ž”8€ç©–Ž1HƒRMINORZ
+CODE_SMELL

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student Management</title>
+</head>
+<body>
+	<h1>Login</h1>   <br>
+	Enter Username : 
+	<input type="text" th:field="*{name}"> <br>
+	Enter Password
+	<input type="text" th:field="*{department}">  <br>
+	  <a th:href="@{/index}"><button type="button">Login</button></a>
+</body>
+</html>

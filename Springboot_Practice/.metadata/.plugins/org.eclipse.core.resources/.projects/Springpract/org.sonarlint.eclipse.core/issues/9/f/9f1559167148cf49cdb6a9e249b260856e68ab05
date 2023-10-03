@@ -1,0 +1,8 @@
+
+–
+java:S1488K"cImmediately return this expression instead of assigning it to the temporary variable "updatedUser".(ÑÚ÷ª8¡š›â1H£RMINORZ
+CODE_SMELL
+‰
+java:S36550"XCall "optionaluser.isPresent()" or "!optionaluser.isEmpty()" before accessing the value.(ëĞÃÎøÿÿÿÿ8ãĞ„°1H¦RMAJORZBUG
+
+java:S3655C"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÀúÉ¹ÿÿÿÿÿ8ãĞ„°1H§RMAJORZBUG

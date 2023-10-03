@@ -1,0 +1,5 @@
+package com.maveric.training.service;
+
+public class MyRestService {
+
+}

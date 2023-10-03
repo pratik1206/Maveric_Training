@@ -1,0 +1,12 @@
+package com.maveric.training.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import jakarta.persistence.Id;
+import com.maveric.training.Model.Student;
+
+	public interface UserRepository  extends CrudRepository<Student,String> {
+
+
+	}
+
+

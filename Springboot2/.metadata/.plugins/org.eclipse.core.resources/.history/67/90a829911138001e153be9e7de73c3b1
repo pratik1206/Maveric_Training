@@ -1,0 +1,21 @@
+package com.maveric.training.Model;
+
+public class Response {
+     private String message;
+     private String error;
+     private String status;
+     private Student student;
+     
+     public Response() {
+    	 
+     }
+	public Response(String message, String error, String status, Student student) {
+		super();
+		this.message = message;
+		this.error = error;
+		this.status = status;
+		this.student = student;
+	}
+     
+     
+}

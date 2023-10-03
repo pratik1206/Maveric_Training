@@ -1,0 +1,19 @@
+package com.pract.java;
+
+import java.util.*;
+
+public class Timezonepract {
+	
+	System.out.println("enter the time u want");	
+	Scanner sc = new Scanner(System.in);
+	int time = sc.nextInt();
+	
+	switch(time) {
+	
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

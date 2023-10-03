@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Spring Boot Thymeleaf</title>
+    <link rel="stylesheet" type="text/css" href="./css/style1.css">
+</head>
+<body>
+<h1>Employee information to be displayed </h1>
+<p th:text="${message}"></p>
+
+ 
+
+<ol>
+
+        <li th:each="emp : ${emplist}">
+
+            <p th:text="  ${emp.empid}+' '+  ${emp.Name}+' '+${emp.Salary}">
+
+        </li>
+
+    </ol>
+
+    
+
+    
+
+ 
+
+    <table border="3px solid">
+
+        <tr>
+             <th>ID</th>
+            <th>Name</th>
+             <th>Salary</th>
+
+        </tr>
+
+        <tr th:each="emp : ${emplist}">
+
+             <td  th:text="${emp.empid}"></td>
+            <td  th:text="${emp.Name}"></td>
+
+            <td  th:text="${emp.Salary}"></td>
+
+        </tr>
+
+    </table>
+</body>
+</html>

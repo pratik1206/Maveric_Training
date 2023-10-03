@@ -1,0 +1,255 @@
+package org.example.demo.serviceTest;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.when;
+
+import java.util.Optional;
+
+import org.example.demo.dao.UserRepository;
+import org.example.demo.dtos.AppUserDetails;
+import org.example.demo.entities.User;
+import org.example.demo.service.UserServiceImpl;
+import org.example.demo.util.TokenUtil;
+import org.example.demo.util.UserUtil;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+public class UserServiceImplTest {
+
+    @Mock
+    private UserRepository userRepository;
+
+    @Mock
+    private TokenUtil tokenUtil;
+
+    @Mock
+    private UserUtil userUtil;
+
+    @Mock
+    private PasswordEncoder passwordEncoder;
+
+    @Mock
+    private AuthenticationManager authenticationManager;
+
+    @InjectMocks
+    private UserServiceImpl userService;
+
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.openMocks(this);
+    }
+
+
+    @Test
+    public void testLoadUserByUsernameWhenUserFound() {
+        // Arrange
+        String username = "testUser";
+        User mockUser = new User();
+        mockUser.setUsername(username);
+        when(userRepository.findUserByUsername(username)).thenReturn(Optional.of(mockUser));
+
+        // Act
+        AppUserDetails userDetails = (AppUserDetails) userService.loadUserByUsername(username);
+
+        // Assert
+        assertNotNull(userDetails);
+        assertEquals(username, userDetails.getUsername());
+    }
+
+    @Test
+    public void testLoadUserByUsernameWhenUserNotFound() {
+        // Arrange
+        String username = "nonExistentUser";
+        when(userRepository.findUserByUsername(username)).thenReturn(Optional.empty());
+
+        // Act and Assert
+        assertThrows(UsernameNotFoundException.class, () -> userService.loadUserByUsername(username));
+    }
+
+    @Test
+    public void testFindUserDetailsByUsernameWhenUserFound() {
+        // Arrange
+        String username = "testUser";
+        User mockUser = new User();
+        mockUser.setUsername(username);
+        when(userRepository.findUserByUsername(username)).thenReturn(Optional.of(mockUser));
+        when(userUtil.toUserDetails(mockUser)).thenReturn(createMockAppUserDetails());
+
+        // Act
+        AppUserDetails userDetails = userService.findUserDetailsByUsername(username);
+
+        // Assert
+        assertNotNull(userDetails);
+        assertEquals(username, userDetails.getUsername());
+    }
+
+    @Test
+    public void testFindUserDetailsByUsernameWhenUserNotFound() {
+        // Arrange
+        String username = "nonExistentUser";
+        when(userRepository.findUserByUsername(username)).thenReturn(Optional.empty());
+
+        // Act and Assert
+        assertThrows(UsernameNotFoundException.class, () -> userService.findUserDetailsByUsername(username));
+    }
+
+    private AppUserDetails createMockAppUserDetails() {
+        AppUserDetails appUserDetails = new AppUserDetails();
+        // Initialize appUserDetails with necessary values
+        return appUserDetails;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    @Test
+//    public void testLoadUserByUsername() {
+//        // Arrange
+//        User user = createUser();
+//        when(userRepository.findUserByUsername("testUser")).thenReturn(Optional.of(user));
+//
+//        // Act
+//        UserDetails userDetails = userService.loadUserByUsername("testUser");
+//
+//        // Assert
+//        assertNotNull(userDetails);
+//        assertEquals("testUser", userDetails.getUsername());
+//        // ... other assertions
+//    }
+//
+//    @Test
+//    public void testGenerateTokenAfterCredentialsCheck() {
+//        // Arrange
+//        LoginRequest loginRequest = new LoginRequest();
+//        when(passwordEncoder.encode(loginRequest.getPassword())).thenReturn("encodedPassword");
+//        when(authenticationManager.authenticate(any())).thenReturn(null);
+//        when(tokenUtil.encode(loginRequest.getUsername())).thenReturn("jwtToken");
+//
+//        // Act
+//        String jwtToken = userService.generateTokenAfterCredentialsCheck(loginRequest);
+//
+//        // Assert
+//        assertNotNull(jwtToken);
+//        // ... other assertions
+//    }
+//
+//    @Test
+//    public void testUpdateUser() {
+//        // Arrange
+//        AppUserDetails userDetails = new AppUserDetails();
+//        userDetails.setId(1L);
+//        User user = createUser();
+//        when(userRepository.findById(1L)).thenReturn(Optional.of(user));
+//        when(userRepository.saveAndFlush(user)).thenReturn(user);
+//
+//        // Act
+//        AppUserDetails updatedUserDetails = userService.updateUser(userDetails);
+//
+//        // Assert
+//        assertNotNull(updatedUserDetails);
+//        assertEquals("testUser", updatedUserDetails.getUsername());
+//        // ... other assertions
+//    }
+//    
+//
+//    @Test
+//    public void testGetPasswordEncoderWhenSet() {
+//        // Arrange
+//        PasswordEncoder mockPasswordEncoder = mock(PasswordEncoder.class);
+//        userService.passwordEncoder = mockPasswordEncoder;
+//
+//        // Act
+//        PasswordEncoder result = userService.getPasswordEncoder();
+//
+//        // Assert
+//        assertSame(mockPasswordEncoder, result);
+//    }
+//
+//    @Test
+//    public void testGetPasswordEncoderWhenNotSet() {
+//        // Arrange
+//        PasswordEncoder mockPasswordEncoder = mock(PasswordEncoder.class);
+//        when(context.getBean(PasswordEncoder.class)).thenReturn(mockPasswordEncoder);
+//        userService.context = context;
+//        // Act
+//        PasswordEncoder result = userService.getPasswordEncoder();
+//
+//        // Assert
+//        assertSame(mockPasswordEncoder, result);
+//    }
+//
+//    // Additional test methods for other scenarios...
+//
+//    @Test
+//    public void testRegisterUser() {
+//        // Arrange
+//        AddUser addUserRequest = new AddUser();
+//        addUserRequest.setUsername("testUser");
+//        addUserRequest.setPassword("password");
+//        addUserRequest.setEmail("test@example.com");
+//
+//        User savedUser = new User();
+//        savedUser.setId(1L);
+//        savedUser.setUsername(addUserRequest.getUsername());
+//        savedUser.setPassword("encodedPassword");
+//        savedUser.setEmail(addUserRequest.getEmail());
+//        savedUser.setRoles("USER");
+//        savedUser.setCreatedAt(LocalDateTime.now());
+//
+//        // Mock getPasswordEncoder behavior
+//        when(passwordEncoder.encode(addUserRequest.getPassword())).thenReturn("encodedPassword");
+//
+//        // Mock userRepo.save behavior
+//        when(userRepository.save(any(User.class))).thenReturn(savedUser);
+//
+//        // Mock userUtil.toUserDetails behavior
+//        when(userUtil.toUserDetails(savedUser)).thenReturn(createMockAppUserDetails());
+//
+//        // Act
+//        AppUserDetails result = userService.registerUser(addUserRequest, "USER");
+//
+//        // Assert
+//        assertNotNull(result);
+//        assertEquals(savedUser.getUsername(), result.getUsername());
+//
+//        // Additional assertions
+//        assertEquals(savedUser.getEmail(), result.getEmail());
+//        assertEquals(savedUser.getRoles(), "USER");
+////        assertEquals(savedUser.getCreatedAt(), result.getCreatedAt());
+//
+//        // Verify interactions with mocks
+//        verify(passwordEncoder).encode(addUserRequest.getPassword());
+//        verify(userRepository).save(any(User.class));
+//        verify(userUtil).toUserDetails(savedUser);
+//    }
+//
+//    private AppUserDetails createMockAppUserDetails() {
+//        AppUserDetails appUserDetails = new AppUserDetails();
+//        // Initialize appUserDetails with necessary values
+//        return appUserDetails;
+//    }
+//    private User createUser() {
+//        User user = new User();
+//        user.setId(1L);
+//        user.setUsername("testUser");
+//        user.setPassword("password");
+//        user.setEmail("test@example.com");
+//        user.setRoles("USER");
+//        return user;
+//    }
+}

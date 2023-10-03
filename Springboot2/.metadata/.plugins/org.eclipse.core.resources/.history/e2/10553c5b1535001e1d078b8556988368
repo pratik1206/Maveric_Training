@@ -1,0 +1,5 @@
+package com.maveric.training.repository;
+
+public interface UserRepository {
+
+}

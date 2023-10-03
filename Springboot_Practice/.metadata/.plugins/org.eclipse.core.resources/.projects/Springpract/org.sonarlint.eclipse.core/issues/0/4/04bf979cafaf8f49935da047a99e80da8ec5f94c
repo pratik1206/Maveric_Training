@@ -1,0 +1,22 @@
+
+U
+java:S5786N"Remove this 'public' modifier.(¾¨¶÷ûÿÿÿÿ8Ñ¾¶´1H²RINFOZ
+CODE_SMELL
+U
+java:S5786;"Remove this 'public' modifier.(ÙÍÙâúÿÿÿÿ8Ñ¾¶´1H°RINFOZ
+CODE_SMELL
+¼
+java:S3577"ŠRename class "Serviceimpl" to match the regular expression: '^((Test|IT)[a-zA-Z0-9_]+|[A-Z][a-zA-Z0-9_]*(Test|Tests|TestCase|IT|ITCase))$'(æø¼üÿÿÿÿH­RMINORZ
+CODE_SMELL
+O
+java:S5786c"Remove this 'public' modifier.(ãîÊ_8Ñ¾¶´1H´RINFOZ
+CODE_SMELL
+U
+java:S5786"Remove this 'public' modifier.(æø¼üÿÿÿÿ8Ñ¾¶´1H¸RINFOZ
+CODE_SMELL
+P
+java:S5786)"Remove this 'public' modifier.(ÿƒè8Ñ¾¶´1H®RINFOZ
+CODE_SMELL
+U
+java:S5786z"Remove this 'public' modifier.(Ãç´§øÿÿÿÿ8Ñ¾¶´1H¶RINFOZ
+CODE_SMELL

@@ -1,0 +1,5 @@
+
+l	java:S125("<This block of commented-out lines of code should be removed.(›Õ“ÕüÿÿÿÿHÕRMAJORZ
+CODE_SMELL
+Œ
+java:S3655"`Call "optionalEmployee.isPresent()" or "!optionalEmployee.isEmpty()" before accessing the value.(Ù£¤¡8µÖà1HïRMAJORZBUG

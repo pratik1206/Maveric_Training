@@ -1,0 +1,6 @@
+
+n	java:S125"<This block of commented-out lines of code should be removed.( ‚²Û8Éöç1HìRMAJORZ
+CODE_SMELL
+…
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(‰÷µÑ8¶í‘—1HëRMAJORZ
+CODE_SMELL

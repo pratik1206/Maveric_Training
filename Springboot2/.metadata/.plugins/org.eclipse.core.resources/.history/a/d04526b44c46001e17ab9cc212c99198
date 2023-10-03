@@ -1,0 +1,5 @@
+package com.kuka.Wishlist.Exception;
+
+public class GlobalServiceExceptionHandler {
+
+}

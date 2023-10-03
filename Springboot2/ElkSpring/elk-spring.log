@@ -1,0 +1,50 @@
+2023-07-31T12:02:02.739+05:30  INFO 1636 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : Starting ElasticSpringSecurityApplication using Java 17.0.6 with PID 1636 (C:\Users\pratikw\Documents\Practice-Springboot\ElasticSpringSecurity\target\classes started by pratikw in C:\Users\pratikw\Documents\Practice-Springboot\ElasticSpringSecurity)
+2023-07-31T12:02:02.740+05:30  INFO 1636 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-31T12:02:03.068+05:30  INFO 1636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-31T12:02:03.070+05:30  INFO 1636 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31T12:02:03.070+05:30  INFO 1636 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-31T12:02:03.105+05:30  INFO 1636 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31T12:02:03.105+05:30  INFO 1636 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 360 ms
+2023-07-31T12:02:03.232+05:30  INFO 1636 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-31T12:02:03.244+05:30  INFO 1636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-31T12:02:03.249+05:30  INFO 1636 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : Started ElasticSpringSecurityApplication in 0.551 seconds (process running for 2465.495)
+2023-07-31T12:02:03.253+05:30  INFO 1636 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-31T12:08:06.841+05:30  INFO 1636 --- [RMI TCP Connection(56)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-07-31T12:08:06.865+05:30  INFO 1636 --- [RMI TCP Connection(56)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31T12:08:42.603+05:30  INFO 18672 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : Starting ElasticSpringSecurityApplication using Java 17.0.6 with PID 18672 (C:\Users\pratikw\Documents\Practice-Springboot\ElasticSpringSecurity\target\classes started by pratikw in C:\Users\pratikw\Documents\Practice-Springboot\ElasticSpringSecurity)
+2023-07-31T12:08:42.605+05:30  INFO 18672 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-31T12:08:42.663+05:30  INFO 18672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31T12:08:42.664+05:30  INFO 18672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31T12:08:43.543+05:30  INFO 18672 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-31T12:08:43.561+05:30  INFO 18672 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31T12:08:43.561+05:30  INFO 18672 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-31T12:08:43.634+05:30  INFO 18672 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31T12:08:43.635+05:30  INFO 18672 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 969 ms
+2023-07-31T12:08:43.952+05:30  INFO 18672 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-31T12:08:43.987+05:30  INFO 18672 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-31T12:08:43.997+05:30  INFO 18672 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : Started ElasticSpringSecurityApplication in 1.823 seconds (process running for 2.422)
+2023-07-31T12:02:02.739+05:30  INFO 1636 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : Starting ElasticSpringSecurityApplication using Java 17.0.6 with PID 1636 (C:\Users\pratikw\Documents\Practice-Springboot\ElasticSpringSecurity\target\classes started by pratikw in C:\Users\pratikw\Documents\Practice-Springboot\ElasticSpringSecurity)
+2023-07-31T12:02:02.740+05:30  INFO 1636 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-31T12:02:03.068+05:30  INFO 1636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-31T12:02:03.070+05:30  INFO 1636 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31T12:02:03.070+05:30  INFO 1636 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-31T12:02:03.105+05:30  INFO 1636 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31T12:02:03.105+05:30  INFO 1636 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 360 ms
+2023-07-31T12:02:03.232+05:30  INFO 1636 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-31T12:02:03.244+05:30  INFO 1636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-31T12:02:03.249+05:30  INFO 1636 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : Started ElasticSpringSecurityApplication in 0.551 seconds (process running for 2465.495)
+2023-07-31T12:02:03.253+05:30  INFO 1636 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-31T12:08:06.841+05:30  INFO 1636 --- [RMI TCP Connection(56)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-07-31T12:08:06.865+05:30  INFO 1636 --- [RMI TCP Connection(56)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31T12:08:42.603+05:30  INFO 18672 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : Starting ElasticSpringSecurityApplication using Java 17.0.6 with PID 18672 (C:\Users\pratikw\Documents\Practice-Springboot\ElasticSpringSecurity\target\classes started by pratikw in C:\Users\pratikw\Documents\Practice-Springboot\ElasticSpringSecurity)
+2023-07-31T12:08:42.605+05:30  INFO 18672 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-07-31T12:08:42.663+05:30  INFO 18672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31T12:08:42.664+05:30  INFO 18672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31T12:08:43.543+05:30  INFO 18672 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-31T12:08:43.561+05:30  INFO 18672 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31T12:08:43.561+05:30  INFO 18672 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-31T12:08:43.634+05:30  INFO 18672 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31T12:08:43.635+05:30  INFO 18672 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 969 ms
+2023-07-31T12:08:43.952+05:30  INFO 18672 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-31T12:08:43.987+05:30  INFO 18672 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-31T12:08:43.997+05:30  INFO 18672 --- [restartedMain] c.m.t.ElasticSpringSecurityApplication   : Started ElasticSpringSecurityApplication in 1.823 seconds (process running for 2.422)

@@ -1,0 +1,26 @@
+package com.pract.java;
+
+public class Practoccurance {
+	
+    public static void main(String[] args) {
+        String s = "my name is pratik, pratik works for maveric";
+        String wordToFind = "pratik";
+        int count = countOccurrences(s, wordToFind);
+        System.out.println("Number of occurrences of '" + wordToFind + "': " + count);
+    }
+    
+    public static int countOccurrences(String text, String word) {
+        int count = 0;
+        int index = 0;
+        
+        while (index != -1) {
+            index = text.indexOf(word, index);
+            if (index != -1) {
+                count++;
+                index += word.length();
+            }
+        }
+        
+        return count;
+    }
+}

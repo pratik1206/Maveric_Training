@@ -1,0 +1,31 @@
+
+u
+java:S1128"BRemove this unused import 'org.apache.commons.logging.LogFactory'.(Ç„Í8áÌ¾µ˜1HöRMINORZ
+CODE_SMELL
+z
+java:S1128"GRemove this unused import 'org.springframework.boot.CommandLineRunner'.(È—ÿÅ8áÌ¾µ˜1HøRMINORZ
+CODE_SMELL
+n
+java:S1128";Remove this unused import 'org.apache.commons.logging.Log'.(Å¼î²8áÌ¾µ˜1HúRMINORZ
+CODE_SMELL
+n	java:S125"<This block of commented-out lines of code should be removed.(úÊÙ³8áÌ¾µ˜1HüRMAJORZ
+CODE_SMELL
+‚
+java:S1128"ORemove this unused import 'org.springframework.web.bind.annotation.GetMapping'.(‡¡‰Ø8Î›ÎÀ—1HıRMINORZ
+CODE_SMELL
+~
+java:S1128"KRemove this unused import 'org.springframework.context.ApplicationContext'.(»Ô»¿8”ûÎÀ—1HÿRMINORZ
+CODE_SMELL
+‹
+java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.RestController'.(±íş¡şÿÿÿÿ8·ÎÀ—1HRMINORZ
+CODE_SMELL
+‚
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8Î›ÎÀ—1HƒRMINORZ
+CODE_SMELL
+n	java:S125"<This block of commented-out lines of code should be removed.(é§–8é×éµ˜1H…RMAJORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(û±Ì…ıÿÿÿÿ8áÌ¾µ˜1H†RMAJORZ
+CODE_SMELL
+e
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8ÂÕƒ¿—1HRMINORZ
+CODE_SMELL

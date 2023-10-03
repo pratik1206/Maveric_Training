@@ -1,0 +1,12 @@
+
+b
+java:S1068"/Remove this unused "floorNumber" private field.(Óıù8úÔÒš–1HÃRMAJORZ
+CODE_SMELL
+
+java:S1319"kThe type of "floorNumber" should be an interface such as "List" rather than the implementation "ArrayList".(è÷ïÓ8¡÷Õš–1HÆRMINORZ
+CODE_SMELL
+	java:S116"WRename this field "BuildingName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õâÀõÿÿÿÿÿ8¤û¿š–1HÉRMINORZ
+CODE_SMELL
+h
+java:S1068"0Remove this unused "BuildingName" private field.(õâÀõÿÿÿÿÿ8¤û¿š–1HÊRMAJORZ
+CODE_SMELL

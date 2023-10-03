@@ -1,0 +1,13 @@
+
+‰
+java:S1192"NDefine a constant instead of duplicating this literal "sak@gmail.com" 6 times.(Ë¯Êüÿÿÿÿÿ8£ĞË¼1HâRCRITICALZ
+CODE_SMELL
+Š
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(„ºÿÿÿÿÿ8ïÿÚ¼1HéRMAJORZ
+CODE_SMELL
+Š
+java:S1192"ODefine a constant instead of duplicating this literal "prat@gmail.com" 6 times.(Ë¯Êüÿÿÿÿÿ8£ĞË¼1HêRCRITICALZ
+CODE_SMELL
+‡
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(îÆÎ›8‘÷Û¼1HñRMINORZ
+CODE_SMELL

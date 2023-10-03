@@ -1,0 +1,18 @@
+package com.pract.java;
+import java.util.*;
+import com.pract.java.Student;
+
+public class Arraylistpract {
+
+	public static List<Student> main(String[] args) {
+	
+		List<Student> list = new ArrayList<>();
+		
+		list.add(new Student(10,"pratik","12th"));
+		list.add(new Student(20,"Amrita","11th"));
+		list.add(new Student(10,"pratik","12th"));
+	
+		return list;
+	}
+	
+}

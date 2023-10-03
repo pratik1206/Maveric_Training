@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\pratikw\Documents\WishlistWithTestCase"/>
+			<item value="C:\Users\pratikw\Downloads\EcommerceFinal (2)"/>
+			<item value="C:\Users\pratikw\Downloads\registration-login-spring-boot-security-thymeleaf"/>
+			<item value="C:\Users\pratikw\Downloads\registration-login-spring-boot-security-thymeleaf-hibernate-master"/>
+			<item value="C:\Users\pratikw\Downloads\registration-login-spring-boot-security-thymeleaf-hibernate-master\registration-login-spring-boot-security-thymeleaf-hibernate-master"/>
+			<item value="C:\Users\pratikw\Downloads\1008518_Amrita Karki\1008518_StudentsDetailsApplication"/>
+			<item value="C:\Users\pratikw\Documents\Practice-Springboot\StudentListFinal-master"/>
+			<item value="C:\Users\pratikw\Downloads\StudentListFinal-master"/>
+			<item value="C:\Users\pratikw\Documents\Practice-Springboot\SpringBootExamCrud"/>
+			<item value="C:\Users\pratikw\Downloads\StudentListFinal-master\StudentListFinal-master"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

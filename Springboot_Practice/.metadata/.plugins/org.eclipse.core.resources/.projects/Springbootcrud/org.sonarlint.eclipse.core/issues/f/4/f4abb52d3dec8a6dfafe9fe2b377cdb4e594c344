@@ -1,0 +1,10 @@
+
+”
+java:S1488"\Immediately return this expression instead of assigning it to the temporary variable "list".(ö‘·¿úÿÿÿÿ8â¥í¥1H¸RMINORZ
+CODE_SMELL
+•
+java:S1488!"bImmediately return this expression instead of assigning it to the temporary variable "studentobj".(ö˜™ø8îÃ¦»1HµRMINORZ
+CODE_SMELL
+f
+java:S1874/".Remove this use of "delete"; it is deprecated.(Æ‘Ëæùÿÿÿÿ8ÀÇíÁ1H»RMINORZ
+CODE_SMELL

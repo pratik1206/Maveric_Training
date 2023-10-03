@@ -1,0 +1,35 @@
+
+b
+java:S1481h"1Remove this unused "authenticate" local variable.(ÀºýìúÿÿÿÿHâRMINORZ
+CODE_SMELL
+o
+java:S1854e"CRemove this useless assignment to local variable "encodedPassword".(¿Ø¾®HçRMAJORZ
+CODE_SMELL
+q
+java:S1854h"@Remove this useless assignment to local variable "authenticate".(ÀºýìúÿÿÿÿHêRMAJORZ
+CODE_SMELL
+`
+java:S1874u"/Remove this use of "isEmpty"; it is deprecated.(·â­¡ÿÿÿÿÿHéRMINORZ
+CODE_SMELL
+m	java:S125“"<This block of commented-out lines of code should be removed.(¦Õ“¬þÿÿÿÿHãRMAJORZ
+CODE_SMELL
+
+java:S1488^"cImmediately return this expression instead of assigning it to the temporary variable "authorities".(§˜Ž¯HèRMINORZ
+CODE_SMELL
+[
+java:S1874r"/Remove this use of "isEmpty"; it is deprecated.(‰¢£ÏHáRMINORZ
+CODE_SMELL
+a
+java:S3655q"7Call "Optional#isPresent()" before accessing the value.(˜•ßÎùÿÿÿÿHäRMAJORZBUG
+`
+java:S1481e"4Remove this unused "encodedPassword" local variable.(¿Ø¾®HåRMINORZ
+CODE_SMELL
+“
+java:S1104'"[Make passwordEncoder a static final constant or non-public and provide accessors if needed.(Š‚ºíþÿÿÿÿ8Æ­¿èŸ1HÊRMINORZ
+CODE_SMELL
+d
+java:S1854p"8Remove this useless assignment to local variable "user".(Ç­‚ûHæRMAJORZ
+CODE_SMELL
+Œ
+java:S1488j"`Immediately return this expression instead of assigning it to the temporary variable "jwtToken".(ðÛûÓHàRMINORZ
+CODE_SMELL

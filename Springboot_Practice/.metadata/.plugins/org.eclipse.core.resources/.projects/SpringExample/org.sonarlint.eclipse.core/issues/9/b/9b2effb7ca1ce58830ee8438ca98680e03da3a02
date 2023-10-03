@@ -1,0 +1,41 @@
+
+ˆ	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç²ÁÓüÿÿÿÿ8ªœåÇ–1HÔRMINORZ
+CODE_SMELL
+N
+java:S36269"Remove this redundant jump.(ûÁÝ…8“¡›Ç–1H­RMINORZ
+CODE_SMELL
+ˆ	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Êíšøÿÿÿÿ8“¡›Ç–1H¡RMINORZ
+CODE_SMELL
+ƒ	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ¼—þ8ªœåÇ–1HÑRMINORZ
+CODE_SMELL
+N
+java:S3626@"Remove this redundant jump.(ûÁÝ…8“¡›Ç–1H«RMINORZ
+CODE_SMELL
+ƒ	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ¼—þ8ªœåÇ–1HÒRMINORZ
+CODE_SMELL
+ˆ	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥½´åûÿÿÿÿ8ªœåÇ–1HÕRMINORZ
+CODE_SMELL
+ƒ	java:S1176"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é“â±8“¡›Ç–1H¢RMINORZ
+CODE_SMELL
+’
+java:S1488*"_Immediately return this expression instead of assigning it to the temporary variable "student".(“ïÐï8“¡›Ç–1H¥RMINORZ
+CODE_SMELL
+ˆ	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Þ¤Úøÿÿÿÿ8“¡›Ç–1H¤RMINORZ
+CODE_SMELL
+N
+java:S3626%"Remove this redundant jump.(ûÁÝ…8“¡›Ç–1H¬RMINORZ
+CODE_SMELL
+a
+java:S1068".Remove this unused "dataSource" private field.(â–ŠÐ8“¡›Ç–1H®RMAJORZ
+CODE_SMELL
+ˆ	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥½´åûÿÿÿÿ8ªœåÇ–1HÖRMINORZ
+CODE_SMELL
+“
+java:S14880"`Immediately return this expression instead of assigning it to the temporary variable "students".(¬öÉ8“¡›Ç–1H¨RMINORZ
+CODE_SMELL
+ˆ	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èÇªûÿÿÿÿ8ªœåÇ–1HÓRMINORZ
+CODE_SMELL
+ƒ	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ÒŽ8“¡›Ç–1H£RMINORZ
+CODE_SMELL
+ˆ	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Î±úÿÿÿÿ8“¡›Ç–1H RMINORZ
+CODE_SMELL

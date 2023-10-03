@@ -1,0 +1,88 @@
+package org.example.demo.controllersTest;
+
+import org.example.demo.controllers.AppController;
+import org.example.demo.dtos.AddUser;
+import org.example.demo.dtos.AppUserDetails;
+import org.example.demo.dtos.LoginRequest;
+import org.example.demo.service.IUserService;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+public class AppControllerTest {
+
+    @Mock
+    private IUserService userService;
+
+    @InjectMocks
+    private AppController appController;
+
+    private MockMvc mockMvc;
+
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.openMocks(this);
+        mockMvc = MockMvcBuilders.standaloneSetup(appController).build();
+    }
+
+    @Test
+    public void testSuccessfulLogin() throws Exception {
+        mockMvc.perform(get("/success"))
+               .andExpect(status().isOk())
+               .andExpect(content().string("You are successfully logged in"));
+    }
+
+    @Test
+    public void testCreateToken() throws Exception {
+        LoginRequest loginRequest = new LoginRequest();
+        when(userService.generateTokenAfterCredentialsCheck(loginRequest)).thenReturn("token");
+
+        mockMvc.perform(post("/user/login")
+               .contentType(MediaType.APPLICATION_JSON)
+               .content("{\"username\":\"username\",\"password\":\"password\"}"))
+               .andExpect(status().isOk())
+               .andExpect(content().string("token"));
+
+        verify(userService, times(1)).generateTokenAfterCredentialsCheck(loginRequest);
+    }
+
+    @Test
+    public void testCreateUser() throws Exception {
+        AddUser addUser = new AddUser("username", "password", "email");
+        AppUserDetails userDetails = new AppUserDetails();
+        when(userService.registerUser(addUser)).thenReturn(userDetails);
+
+        mockMvc.perform(post("/user/registeration")
+               .contentType(MediaType.APPLICATION_JSON)
+               .content("{\"username\":\"username\",\"password\":\"password\",\"email\":\"email\"}"))
+               .andExpect(status().isOk())
+               .andExpect(jsonPath("$.username").value("username"));
+
+        verify(userService, times(1)).registerUser(addUser);
+    }
+
+    @Test
+    public void testFetchUser() throws Exception {
+        AppUserDetails userDetails = new AppUserDetails();
+        when(userService.findUserDetailsByUsername("username")).thenReturn(userDetails);
+
+        mockMvc.perform(get("/a/user/retrieve/{username}", "username"))
+               .andExpect(status().isOk())
+               .andExpect(jsonPath("$.username").exists());
+
+        verify(userService, times(1)).findUserDetailsByUsername("username");
+    }
+
+    // Similar tests for updateUser and deleteUser methods...
+}
+

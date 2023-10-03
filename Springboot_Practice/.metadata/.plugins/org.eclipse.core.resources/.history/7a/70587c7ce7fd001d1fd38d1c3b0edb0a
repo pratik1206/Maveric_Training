@@ -1,0 +1,9 @@
+package com.pract.java;
+
+public class Third {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

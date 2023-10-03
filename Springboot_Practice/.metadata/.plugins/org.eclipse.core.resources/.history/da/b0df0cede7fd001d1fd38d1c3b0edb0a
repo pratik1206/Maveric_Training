@@ -1,0 +1,26 @@
+package com.pract.java;
+
+public class Third {
+	
+		    public static void main(String[] args) {
+	        String s = "my name is pratik, pratik";
+	        String wordToReplace = "pratik";
+	        String replacement = "i";
+
+	        String result = replaceSecondInstance(s, wordToReplace, replacement);
+	        System.out.println("Resulting string: " + result);
+	    }
+
+	    public static String replaceSecondInstance(String text, String word, String replacement) {
+	        int firstIndex = text.indexOf(word);
+	        if (firstIndex != -1) {
+	            int secondIndex = text.indexOf(word, firstIndex + 1);
+	            if (secondIndex != -1) {
+	                return text.substring(0, secondIndex) + replacement + text.substring(secondIndex + word.length());
+	            }
+	        }
+	        return text;
+	    }
+	}
+
+

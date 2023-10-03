@@ -1,0 +1,5 @@
+package com.maveric.training.config;
+
+public class SecurityConfig {
+
+}

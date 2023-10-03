@@ -1,0 +1,22 @@
+//package com.kuka.Wishlist.Exception;
+//
+//import org.springframework.http.HttpStatus;
+//import org.springframework.http.ResponseEntity;
+//import org.springframework.web.bind.annotation.ExceptionHandler;
+//import org.springframework.web.bind.annotation.RestControllerAdvice;
+//
+//import com.kuka.Wishlist.service.UserNotFoundException;
+//
+//import lombok.extern.slf4j.Slf4j;
+//
+//@RestControllerAdvice
+//@Slf4j
+//public class GlobalServiceExceptionHandler {
+//
+//
+//    @ExceptionHandler(UserNotFoundException.class)
+//    public ResponseEntity<String> handleUserNotFoundException(UserNotFoundException ex) {
+//        log.warn("User not found exception: {}", ex.getMessage());
+//        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+//    }
+//}

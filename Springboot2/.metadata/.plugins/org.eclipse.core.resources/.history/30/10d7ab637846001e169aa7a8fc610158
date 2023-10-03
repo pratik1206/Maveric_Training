@@ -1,0 +1,212 @@
+package com.kuka.Wishlist.Service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.when;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.util.ReflectionTestUtils;
+
+import com.kuka.Wishlist.Entity.WishlistItem;
+import com.kuka.Wishlist.dao.IWishlistRepo;
+import com.kuka.Wishlist.dto.DeleteResponse;
+import com.kuka.Wishlist.dto.WishListRequest;
+import com.kuka.Wishlist.service.UserNotFoundException;
+import com.kuka.Wishlist.service.WishListServiceImpl;
+
+@ExtendWith(MockitoExtension.class)
+public class WishListServiceImplTest {
+
+   
+
+    @Mock
+    private IWishlistRepo iWishlistRepo;
+    
+    @InjectMocks
+    private WishListServiceImpl wishListService;
+
+    @BeforeEach
+    public void setUp()
+    {
+
+        ReflectionTestUtils.setField(wishListService, "iWishlistRepo",iWishlistRepo);
+    }
+    @Test
+    public void addItemToWishListSuccess()
+    {
+        //if case
+        int userId=12;
+        String productId="abc";
+        WishListRequest wishListRequest =PrepareWishListRequest();
+        WishlistItem addItem = PrepareWishListItem();
+        Mockito.when(iWishlistRepo.findByProductId(productId,userId)).thenReturn(addItem);
+        Mockito.when(iWishlistRepo.saveAndFlush(addItem)).thenReturn(addItem);
+        WishListRequest wishListedItem=wishListService.addItemToWishList(wishListRequest);/*--null  to pass*/
+
+        Assertions.assertEquals("abc",wishListedItem.getProductId());
+        Assertions.assertEquals(12, wishListedItem.getUserId());
+
+    }
+
+
+
+
+
+
+
+
+    @Test
+    public void deleteItemFromWishList()throws Exception
+    {
+        //if case
+        int userId=12;
+        String productId="abc";
+
+        WishlistItem Item = PrepareWishListItem();
+        DeleteResponse deleteResponse=new DeleteResponse();
+        Mockito.when(iWishlistRepo.findByProductId(productId,userId)).thenReturn(Item);
+        DeleteResponse delete=wishListService.deleteItemFromWishList(productId,userId);
+
+        Assertions.assertEquals("abc",Item.getProductId());
+        Assertions.assertEquals(12, Item.getUserId());
+
+
+    }
+
+    @Test
+    public void deleteItemFromWishListElse()throws Exception
+    {
+
+        int userId=12;
+        String productId="abc";
+        Mockito.when(iWishlistRepo.findByProductId(productId,userId)).thenReturn(null);
+        //classUnderTest.deleteItemFromWishList(productId,userId);
+        Assertions.assertThrows(RuntimeException.class,()->wishListService.deleteItemFromWishList(productId,userId));
+
+
+    }
+
+    private WishlistItem PrepareWishListItem() {
+        WishlistItem wishListItem = new WishlistItem();
+
+
+        wishListItem.setSerialNo(1);
+        wishListItem.setCreatedAt(LocalDate.now());
+        wishListItem.setUserId(12);
+        wishListItem.setQuantity(1);
+        wishListItem.setProductId("abc");
+
+        return wishListItem;
+    }
+
+
+    private WishListRequest PrepareWishListRequest() {
+        WishListRequest wishListRequest = new WishListRequest();
+
+
+        wishListRequest.setSerialNo(1);
+        wishListRequest.setCreatedAt(LocalDate.now());
+        wishListRequest.setUserId(12);
+        wishListRequest.setQuantity(1);
+        wishListRequest.setProductId("abc");
+
+        return wishListRequest;
+    }
+
+
+    //else case
+
+    @Test
+    public void addItemToWishListFailure()
+    {
+        //if case
+        int userId=12;
+        String productId="abc";
+        WishListRequest wishListRequest =PrepareWishListRequest();
+        WishlistItem addItem = PrepareWishListItem();
+        Mockito.when(iWishlistRepo.findByProductId(productId,userId)).thenReturn(null);
+        Mockito.when(iWishlistRepo.saveAndFlush(Mockito.any())).thenReturn(addItem);
+        WishListRequest wishListedItem=wishListService.addItemToWishList(wishListRequest);
+
+
+    }
+    
+    
+    @Test
+    public void testRetrieveItemFromWishList() {
+        // Create some dummy data using the WishlistItem structure
+        WishlistItem item1 = new WishlistItem();
+        item1.setSerialNo(1);
+        item1.setProductId("prod123");
+        item1.setUserId(101);
+        item1.setQuantity(2);
+
+        List<WishlistItem> dummyData = new ArrayList<>();
+        dummyData.add(item1);
+        // Add more items as needed
+
+        // Set up the behavior of the mock repository
+        when(iWishlistRepo.findAll()).thenReturn(dummyData);
+
+        // Call the method you want to test
+        List<WishListRequest> result = wishListService.retrieveItemFromWishList();
+
+        // Perform assertions
+        assertEquals(dummyData.size(), result.size()); // Check if the result size matches the dummy data size
+
+        WishListRequest resultItem = result.get(0);
+        assertNotNull(resultItem); // Check if the result item is not null
+        assertEquals(item1.getSerialNo(), resultItem.getSerialNo()); // Check if Serial No matches
+        assertEquals(item1.getProductId(), resultItem.getProductId()); // Check if Product ID matches
+ 	    }
+    
+    
+    @Test
+    void testRetrieveItemFromWishListByID_UserNotFound() {
+        int userId = 1;
+
+        when(iWishlistRepo.findById(userId)).thenReturn(Optional.empty());
+
+        assertThrows(UserNotFoundException.class, () -> wishListService.retrieveItemFromWishListByID(userId));
+    }
+
+    @Test
+    void testRetrieveItemFromWishListByID_ItemFound() {
+        int userId = 1;
+
+        WishlistItem wishlistItem = new WishlistItem();
+        wishlistItem.setSerialNo(1);
+        wishlistItem.setProductId("sampleProductId");
+        wishlistItem.setUserId(userId);
+        wishlistItem.setQuantity(10);
+        // Set other properties as needed
+
+        when(iWishlistRepo.findById(userId)).thenReturn(Optional.of(wishlistItem));
+
+        Optional<WishListRequest> result = wishListService.retrieveItemFromWishListByID(userId);
+
+        assertTrue(result.isPresent()); // Ensure Optional is present
+
+        assertEquals(wishlistItem.getSerialNo(), result.get().getSerialNo());
+        assertEquals(wishlistItem.getProductId(), result.get().getProductId());
+        assertEquals(wishlistItem.getQuantity(), result.get().getQuantity());
+        assertEquals(wishlistItem.getUserId(), result.get().getUserId());
+       
+    }
+
+
+}

@@ -1,0 +1,16 @@
+
+[
+java:S3740:"/Provide the parametrized type for this generic.(šæŸH'RMAJORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(ó°¦ùøÿÿÿÿ8çªÈ¦¤1H'RMAJORZ
+CODE_SMELL
+n	java:S125c"<This block of commented-out lines of code should be removed.(û½£8¤»µ¦¤1H’'RMAJORZ
+CODE_SMELL
+n	java:S125J"<This block of commented-out lines of code should be removed.(û½£8¤»µ¦¤1H“'RMAJORZ
+CODE_SMELL
+’
+java:S1488:"fImmediately return this expression instead of assigning it to the temporary variable "responseEntity".(šæŸH”'RMINORZ
+CODE_SMELL
+[
+java:S3740:"/Provide the parametrized type for this generic.(šæŸH—'RMAJORZ
+CODE_SMELL

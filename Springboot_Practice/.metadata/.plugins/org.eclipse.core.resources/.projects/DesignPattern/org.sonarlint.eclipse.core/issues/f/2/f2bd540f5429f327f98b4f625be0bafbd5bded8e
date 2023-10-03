@@ -1,0 +1,9 @@
+
+„	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡°ÖHŸRMINORZ
+CODE_SMELL
+š
+java:S11926"_Define a constant instead of duplicating this literal "Press Enter key to continue..." 4 times.(µµ¿ðÿÿÿÿÿ8öëÞù”1H RCRITICALZ
+CODE_SMELL
+ˆ
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(œû¿Ø8öëÞù”1H¥RCRITICALZ
+CODE_SMELL

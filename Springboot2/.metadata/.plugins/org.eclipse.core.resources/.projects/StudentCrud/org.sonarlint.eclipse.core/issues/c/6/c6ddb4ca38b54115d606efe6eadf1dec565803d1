@@ -1,0 +1,7 @@
+
+{
+java:S1192"GDefine a constant instead of duplicating this literal "signup" 4 times.(Ÿ‚òùÿÿÿÿHÌ	RCRITICALZ
+CODE_SMELL
+{
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ú›¤ÿıÿÿÿÿHÑ	RMINORZ
+CODE_SMELL

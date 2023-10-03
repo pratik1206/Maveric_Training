@@ -1,0 +1,14 @@
+
+’
+java:S41652"aRemove this useless assignment; "std" already holds the assigned value along all execution paths.(ô¹ÝóøÿÿÿÿHÏRMAJORZ
+CODE_SMELL
+°
+java:S11866"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çµí‘HÑRCRITICALZ
+CODE_SMELL
+h
+java:S18542"7Remove this useless assignment to local variable "std".(ô¹ÝóøÿÿÿÿHÓRMAJORZ
+CODE_SMELL
+Y
+java:S16562"/Remove or correct this useless self-assignment.(ô¹ÝóøÿÿÿÿHÔRMAJORZBUG
+	java:S116"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É¬­ÁøÿÿÿÿHÐRMINORZ
+CODE_SMELL

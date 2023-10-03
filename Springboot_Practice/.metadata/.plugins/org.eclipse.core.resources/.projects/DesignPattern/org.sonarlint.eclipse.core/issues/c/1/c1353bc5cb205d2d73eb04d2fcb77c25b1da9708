@@ -1,0 +1,7 @@
+
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†ŞùH´RMINORZ
+CODE_SMELL
+	java:S116"VRename this field "Designation" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñû¿ÿÿÿÿÿ8ÖŒ›•1HµRMINORZ
+CODE_SMELL
+„	java:S116"RRename this field "Address" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Ü©8ÖŒ›•1H¶RMINORZ
+CODE_SMELL

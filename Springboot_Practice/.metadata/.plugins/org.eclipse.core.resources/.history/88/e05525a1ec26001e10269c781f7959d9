@@ -1,0 +1,21 @@
+package com.maveric.api.Training;
+
+
+	@RestController
+
+	public class HelloComputer {
+
+	    
+
+	    @GetMapping("/")
+
+	    public String getMessage() {
+
+	        return "Spring Boot Application Started";
+
+	    }
+
+	 
+
+	}
+}

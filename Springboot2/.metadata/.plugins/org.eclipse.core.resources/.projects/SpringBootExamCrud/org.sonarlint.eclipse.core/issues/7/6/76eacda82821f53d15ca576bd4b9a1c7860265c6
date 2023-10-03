@@ -1,0 +1,15 @@
+
+
+java:S41444"WUpdate this method so that its implementation is not identical to "addUser" on line 36.(¹¡‹Šÿÿÿÿÿ8Ó¢ÉÀ1HŞRMAJORZ
+CODE_SMELL
+~
+java:S1192"HDefine a constant instead of duplicating this literal "student" 3 times.(”À¢İ8ÔöÙ©1HàRCRITICALZ
+CODE_SMELL
+
+java:S1192&"KDefine a constant instead of duplicating this literal "redirect:/" 5 times.(äÔ¶½8¤êäÿœ1HäRCRITICALZ
+CODE_SMELL
+n	java:S125F"<This block of commented-out lines of code should be removed.(¼¼ıÉ8Ó¢ÉÀ1HêRMAJORZ
+CODE_SMELL
+s
+java:S1128"@Remove this unused import 'com.maveric.training.Model.Response'.(­ÌåÁ8•¶×¾1HóRMINORZ
+CODE_SMELL

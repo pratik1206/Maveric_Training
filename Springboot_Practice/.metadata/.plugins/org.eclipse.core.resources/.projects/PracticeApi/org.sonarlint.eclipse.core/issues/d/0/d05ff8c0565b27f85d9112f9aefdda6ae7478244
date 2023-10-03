@@ -1,0 +1,9 @@
+
+ƒ	java:S116"SRename this field "Lastname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ÷óùÿÿÿÿH„RMINORZ
+CODE_SMELL
+	java:S116"TRename this field "Firstname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•‹£ÜH…RMINORZ
+CODE_SMELL
+Š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(›¨¡©øÿÿÿÿH†RMINORZ
+CODE_SMELL
+}	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûœ¢ÄıÿÿÿÿH‡RMINORZ
+CODE_SMELL

@@ -1,0 +1,16 @@
+package com.kuka.Wishlist.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.kuka.Wishlist.dto.DeleteResponse;
+import com.kuka.Wishlist.dto.WishListRequest;
+
+public interface IWishListService {
+    WishListRequest addItemToWishList(WishListRequest wishListRequest);
+    DeleteResponse deleteItemFromWishList(String productId, int userId)throws Exception;
+    public List<WishListRequest> retrieveItemFromWishList();
+	public Optional<WishListRequest> retrieveItemFromWishListByID(int productId);
+
+}
+

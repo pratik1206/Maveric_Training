@@ -1,0 +1,49 @@
+
+m
+java:S22096"5Change this instance-reference to a static reference.(­ª±“ùÿÿÿÿ8±ôÇù”1H€RMAJORZ
+CODE_SMELL
+n
+java:S6437&"6Revoke and change this password, as it is compromised.(òÄ¿ë8±ôÇù”1H‚RBLOCKERZVULNERABILITY
+h
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8±ôÇù”1HƒRMINORZ
+CODE_SMELL
+„	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡°ÖHêRMINORZ
+CODE_SMELL
+f
+java:S1128"3Remove this unused import 'java.io.BufferedReader'.(€é²Å8±ôÇù”1H…RMINORZ
+CODE_SMELL
+m
+java:S2209O"5Change this instance-reference to a static reference.(Œ„ ùúÿÿÿÿ8±ôÇù”1H‡RMAJORZ
+CODE_SMELL
+}
+java:S2095P"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Œ•âÑ8±ôÇù”1H‰RBLOCKERZBUG
+Ğ
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(é¼Áÿÿÿÿÿ8±ôÇù”1HŠRINFOZ
+CODE_SMELL
+n
+java:S2209€"5Change this instance-reference to a static reference.(­ª±“ùÿÿÿÿ8±ôÇù”1HRMAJORZ
+CODE_SMELL
+i
+java:S1128"6Remove this unused import 'java.io.InputStreamReader'.(ãˆÎÉ8±ôÇù”1HRMINORZ
+CODE_SMELL
+m
+java:S2209k"5Change this instance-reference to a static reference.(­ª±“ùÿÿÿÿ8±ôÇù”1H’RMAJORZ
+CODE_SMELL
+e
+java:S4925%"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8±ôÇù”1H”RMAJORZ
+CODE_SMELL
+l
+java:S3972?"7Move this "if" to a new line or add the missing "else".(»ğ¹8İàÎù”1H•RCRITICALZ
+CODE_SMELL
+r
+java:S3972\"7Move this "if" to a new line or add the missing "else".(Ñ¹è¤úÿÿÿÿ8İàÎù”1H—RCRITICALZ
+CODE_SMELL
+r
+java:S3972^"7Move this "if" to a new line or add the missing "else".(“ˆÈäøÿÿÿÿ8İàÎù”1H™RCRITICALZ
+CODE_SMELL
+l
+java:S3972s"7Move this "if" to a new line or add the missing "else".(»ğ¹8İàÎù”1H›RCRITICALZ
+CODE_SMELL
+m
+java:S3972‡"7Move this "if" to a new line or add the missing "else".(»ğ¹8İàÎù”1HRCRITICALZ
+CODE_SMELL

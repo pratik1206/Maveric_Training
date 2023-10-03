@@ -1,0 +1,46 @@
+package com.example.demo.Service;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.Model.UserRecord;
+import com.example.demo.Repository.UserRepository;
+
+
+
+@Service    
+
+public class UserService {
+	@Autowired    
+	private UserRepository userRepository;    
+	public List<UserRecord> getAllUsers()  
+	{    
+		List<UserRecord>userRecords = new ArrayList<>();    
+		userRepository.findAll().forEach(userRecords::add);    
+		return userRecords;    
+	}    
+	public void addUser(UserRecord userRecord)  
+	{    
+		userRepository.save(userRecord);    
+	}
+	public void deleteUser(String id)  
+	{    
+		userRepository.deleteById(id);    
+	}
+	public void addUsers(UserRecord userRecord)  
+	{    
+		userRepository.save(userRecord);    
+	}
+	
+	public Optional<UserRecord> getAllUsersBYId(String id)  
+	{    
+		
+		return userRepository.findById(id);    
+		    
+	} 
+	
+}

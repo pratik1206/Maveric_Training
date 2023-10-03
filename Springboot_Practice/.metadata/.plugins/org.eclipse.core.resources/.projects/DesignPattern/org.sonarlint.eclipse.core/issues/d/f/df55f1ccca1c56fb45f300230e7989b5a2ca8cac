@@ -1,0 +1,6 @@
+
+p
+java:S1610"?Convert the abstract class "AbstractFactory" into an interface.(Æ±ÀùÿÿÿÿHØRMINORZ
+CODE_SMELL
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–ïË®H×RMINORZ
+CODE_SMELL

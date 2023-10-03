@@ -1,0 +1,17 @@
+
+b
+java:S1135"2Complete the task associated to this TODO comment.(» æžÿÿÿÿÿHôRINFOZ
+CODE_SMELL
+|	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÚÃËHíRMINORZ
+CODE_SMELL
+|	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÚÃËHîRMINORZ
+CODE_SMELL
+|	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÚÃËHïRMINORZ
+CODE_SMELL
+r
+java:S1659
+"FDeclare "FirstTerm" and all following declarations on a separate line.(ˆÚÃËHðRMINORZ
+CODE_SMELL

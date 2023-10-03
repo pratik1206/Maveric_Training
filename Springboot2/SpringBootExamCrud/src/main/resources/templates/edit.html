@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Student</title>
+</head>
+<body>
+    <h2>Edit Student</h2>
+    <form th:action="@{/update}" th:object="${student}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <input type="text" th:field="*{name}" placeholder="Name"/>
+        <input type="text" th:field="*{email}" placeholder="Email"/>
+        <input type="text" th:field="*{department}" placeholder="Department"/>
+        <input type="text" th:field="*{courses}" placeholder="Courses"/>
+        <button type="submit">Update</button>
+    </form>
+    <a th:href="@{/}">Back to List</a>
+</body>
+</html>

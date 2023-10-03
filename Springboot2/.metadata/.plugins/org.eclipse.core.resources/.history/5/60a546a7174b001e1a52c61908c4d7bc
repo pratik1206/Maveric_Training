@@ -1,0 +1,149 @@
+package com.kuka.Wishlist.service;
+
+import com.kuka.Wishlist.Entity.WishlistItem;
+import com.kuka.Wishlist.dao.IWishlistRepo;
+import com.kuka.Wishlist.dto.DeleteResponse;
+import com.kuka.Wishlist.dto.WishListRequest;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.ArrayList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class WishListServiceImpl implements IWishListService {
+    private static final Logger logger = LoggerFactory.getLogger(WishListServiceImpl.class);
+
+    @Autowired
+    private IWishlistRepo iWishlistRepo;
+    
+    @Autowired
+    public WishListServiceImpl(IWishlistRepo wishlistRepo) {
+        this.iWishlistRepo = wishlistRepo;
+    }
+
+    /**
+     * @param wishListRequest
+     * @return wishListRequest
+     */
+    @Override
+    public WishListRequest addItemToWishList(WishListRequest wishListRequest) {
+
+        WishlistItem wishlistItem = iWishlistRepo.findByProductId(wishListRequest.getProductId(), wishListRequest.getUserId());
+
+        if (wishlistItem != null) { 
+            wishlistItem.setQuantity(wishlistItem.getQuantity() + 1);
+
+        } else {
+            wishlistItem = new WishlistItem();
+
+            BeanUtils.copyProperties(wishListRequest, wishlistItem);
+            wishlistItem.setQuantity(1);
+
+        }
+        wishlistItem = iWishlistRepo.saveAndFlush(wishlistItem);
+        BeanUtils.copyProperties(wishlistItem, wishListRequest);
+        return wishListRequest;
+    }
+
+    /**
+     *
+     * @param productId
+     * @param userId
+     * @return response
+     */
+
+    public DeleteResponse deleteItemFromWishList(String productId, int userId) throws Exception{
+
+        WishlistItem wishlistItem = iWishlistRepo.findByProductId(productId, userId);
+        System.out.println(wishlistItem.toString());
+        if (wishlistItem != null && wishlistItem.getProductId() != null) {
+
+            iWishlistRepo.delete(wishlistItem);
+            DeleteResponse response = new DeleteResponse("Product deleted");
+
+            return response;
+
+        } else {
+
+            throw new RuntimeException("WishlistItem not found for Id");
+        }
+    }
+    
+	  
+	  /**
+	   * Retrieves all wishlist items from the WishList.
+	   * 
+	   * @return A list of WishListRequest objects containing the details of all wishlist items.
+	   */
+	 
+	  
+	  public List<WishListRequest> retrieveItemFromWishList() {
+	      List<WishlistItem> wishlistdata = iWishlistRepo.findAll();
+
+	      List<WishListRequest> wishListRequests = new ArrayList<>();
+	      for (WishlistItem item : wishlistdata) {
+	          WishListRequest request = new WishListRequest();
+	          BeanUtils.copyProperties(item, request);
+	          wishListRequests.add(request);
+	      }
+	      
+	      return wishListRequests;
+	  }
+	  
+	  /**
+	   * Retrieves a wishlist item based on the provided user ID.
+	   * 
+	   * @param userId The ID of the user for whom the wishlist item is to be retrieved.
+	   * @return An Optional containing the retrieved wishlist item if found, or an empty Optional if not found.
+	   * @throws UserNotFoundException If no wishlist item is found for the given user ID.
+	   */
+	  
+	  
+	 
+//	  @Override
+//	  public Optional<WishListRequest> retrieveItemFromWishListByID(int userId) {
+//	      WishlistItem wishlistItem = iWishlistRepo.findByUserId(userId);
+//
+//	      if (wishlistItem != null) {
+//	          WishListRequest request = new WishListRequest();
+//	          BeanUtils.copyProperties(wishlistItem, request);
+//	          return Optional.of(request);
+//	      } else {
+//	          throw UserNotFoundException.userWithUserIdNotFound(userId);
+//	      }
+//	  }
+
+	  public List<WishListRequest> getListOfWishListItem(int userId) {
+		    List<WishlistItem> wishlistItems = iWishlistRepo.getListOfWishListItems(userId);
+
+		    if (wishlistItems.isEmpty()) {
+		        throw UserNotFoundException.userWithUserIdNotFound(userId);
+		    }
+
+		    return convertToListOfWishListRequest(wishlistItems);
+		}
+	  @Override
+	  public Optional<WishListRequest> retrieveItemFromWishListByProductId(String productId) {
+	      WishlistItem wishlistItem = iWishlistRepo.findByProductId(productId);
+
+	      if (wishlistItem != null) {
+	          WishListRequest request = new WishListRequest();
+	          BeanUtils.copyProperties(wishlistItem, request);
+	          return Optional.of(request);
+	      } else {
+	          throw UserNotFoundException.userWithProductIdNotFound(productId);
+	      }
+	  }
+
+
+}
+
+
+
+
+

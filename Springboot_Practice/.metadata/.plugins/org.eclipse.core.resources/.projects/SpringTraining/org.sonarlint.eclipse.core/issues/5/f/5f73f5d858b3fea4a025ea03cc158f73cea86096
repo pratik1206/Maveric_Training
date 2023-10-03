@@ -1,0 +1,21 @@
+
+Œ
+java:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ïå©Ö8…úŒ›–1HÁRMINORZ
+CODE_SMELL
+m	java:S125"<This block of commented-out lines of code should be removed.(ôù’[8ÿžœ›–1H¸RMAJORZ
+CODE_SMELL
+m	java:S125'"<This block of commented-out lines of code should be removed.(«û†38ÕÁ«Ã–1HÂRMAJORZ
+CODE_SMELL
+n	java:S125*"<This block of commented-out lines of code should be removed.(ÝÕ›†8ÓÙ«Ã–1H×RMAJORZ
+CODE_SMELL
+n	java:S125,"<This block of commented-out lines of code should be removed.(¡Í¥“8ÓÙ«Ã–1HØRMAJORZ
+CODE_SMELL
+c
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÓÙ«Ã–1HÙRMINORZ
+CODE_SMELL
+f
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8ÓÙ«Ã–1HÛRMINORZ
+CODE_SMELL
+g
+java:S1128"4Remove this unused import 'javax.swing.JOptionPane'.(÷‰Îé8ÓÙ«Ã–1HÝRMINORZ
+CODE_SMELL

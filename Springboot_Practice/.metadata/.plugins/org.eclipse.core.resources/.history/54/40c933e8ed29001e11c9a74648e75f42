@@ -1,0 +1,15 @@
+package com.maveric.api.CommandLineRunner;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+public class MessageController {
+   @RequestMapping(value = "/", method = RequestMethod.GET)
+public String GetMessage() {
+	return "This message from server";
+}
+   
+   
+ 
+}

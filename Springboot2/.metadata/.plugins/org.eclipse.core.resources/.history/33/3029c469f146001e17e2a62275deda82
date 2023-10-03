@@ -1,0 +1,72 @@
+swagger: '2.0'
+info:
+  version: 'v3.5'
+  title: Ecommerce Portal
+host: localhost
+basePath: /account/register
+tags:
+  - name: WishList
+    description: APIs to add product to wishlist
+
+
+schemes:
+  - http
+paths:
+  /Wishlist/add:
+    post:
+      tags:
+        - WishList
+      summary: to add products to wishlist
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/WishListRequestSchema'
+
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/ResponseSchema'
+
+
+definitions:
+  ResponseSchema:
+    properties:
+      message:
+        $ref: '#/definitions/TypeString'
+      result:
+        $ref: '#/definitions/ArraySchemaResp'
+      resultStr:
+        type: object
+
+      status:
+        $ref: '#/definitions/TypeString'
+      statusCode:
+        $ref: '#/definitions/TypeInt'
+  TypeString:
+    type: string
+  TypeInt:
+    type: integer
+    format: int32
+  TypeBoolean:
+    type: boolean
+  ArraySchemaResp:
+    type: array
+    items:
+      type: string
+      description: Id
+
+  WishListRequestSchema:
+    properties:
+
+      ProductId:
+        type: string
+
+      userId:
+        type: integer
+        format: int32
+
+
+

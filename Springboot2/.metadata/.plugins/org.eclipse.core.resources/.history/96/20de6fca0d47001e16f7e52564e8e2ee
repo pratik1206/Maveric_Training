@@ -1,0 +1,7 @@
+package com.kuka.Wishlist.service;
+
+public class UserNotFoundException extends RuntimeException {
+    public UserNotFoundException(String message) {
+        super(message);
+    }
+}
