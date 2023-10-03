@@ -1,0 +1,102 @@
+openapi: 3.0.0
+info:
+  title: Order API
+  version: 1.0.0
+
+paths:
+  /order/save:
+    post:
+      summary: Save a new order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderDto'  # Reference the OrderDto schema
+      responses:
+        '201':
+          description: Order successfully saved
+          content:
+            application/json:
+              example:
+                orderId: 1
+                userId: 123
+                orderDate: '2023-09-12T14:30:00'
+                totalAmount: 150.00
+                status: 'Pending'
+
+  /order/retrieve/user/{userId}:
+    get:
+      summary: Get all orders by user ID
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                - orderId: 1
+                  userId: 123
+                  orderDate: '2023-08-23T12:34:56'
+                  totalAmount: 100.00
+                  status: 'Pending'
+                - orderId: 2
+                  userId: 123
+                  orderDate: '2023-08-24T10:11:12'
+                  totalAmount: 50.00
+                  status: 'Completed'
+
+  /order/retrieve/{orderId}:
+    get:
+      summary: Get an order by ID
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                orderId: 1
+                userId: 123
+                orderDate: '2023-08-23T12:34:56'
+                totalAmount: 100.00
+                status: 'Pending'
+
+components:
+  schemas:
+    OrderDto:
+      type: object
+      properties:
+        userId:
+          type: integer
+        totalAmount:
+          type: number
+          format: float
+        status:
+          type: string
+
+    Order:
+      type: object
+      properties:
+        orderId:
+          type: integer
+        userId:
+          type: integer
+        orderDate:
+          type: string
+          format: date-time
+        totalAmount:
+          type: number
+          format: float
+        status:
+          type: string

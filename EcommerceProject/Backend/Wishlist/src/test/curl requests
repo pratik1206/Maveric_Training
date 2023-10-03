@@ -1,0 +1,11 @@
+curl --location 'http://localhost:8080/wishlists/add' \
+--header 'Content-Type: application/json' \
+--data '{
+
+
+  "userId":"1000",
+
+    "productId":"aubc"
+
+
+}'

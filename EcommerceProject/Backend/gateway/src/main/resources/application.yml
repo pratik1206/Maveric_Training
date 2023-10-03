@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: service_user
+          uri: lb://ecommerceuserms
+          predicates:
+            - Path=/users/**
+        - id: service_order
+          uri: lb://ecommerce-order-ms
+          predicates:
+            - Path=/order/**
+        - id: service_cart
+          uri: lb://ecommerce-cart-ms
+          predicates:
+            - Path=/cartservice/**
+        - id: service_product
+          uri: lb://product_MS
+          predicates:
+            - Path=/product/**
+        - id: service_wishlist
+          uri: lb://wishlistms
+          predicates:
+            - Path=/wishlist/**
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka
+  instance:
+    hostname: localhost
+
+#eureka.client.serviceUrl.defaultZone=http://localhost:9000/eureka

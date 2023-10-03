@@ -1,0 +1,117 @@
+swagger: '2.0'
+info:
+  version: 'v3.5'
+  title: Ecommerce Portal(Kuka)
+host: localhost
+basePath: /wishlist
+tags:
+  - name: Add item to wishlist
+    description: APIs to add item to wishlist
+  - name: Delete item from wishlist
+    description: APIs to delete item from wishlist
+  - name: Retrieve
+    description: APIs to retrieve item
+
+
+schemes:
+  - http
+paths:
+  /wishlist/add:
+    post:
+      tags:
+        - wishlist
+      summary: Add item to wishlist
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/WishlistSchema'
+
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/ResponseSchema'
+  /wishlist/delete/{productId}/{userId}:
+    delete:
+      tags:
+        - wishlist
+      summary: to delete item from wishlist
+      parameters:
+        - name: userId
+          in: path
+          type: integer
+          format: int64
+          required: true
+        - name: productId
+          in: path
+          type: integer
+          format: int64
+          required: true
+
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/ResponseSchema'
+  /wishlist/{userId}:
+    get:
+      tags:
+        - wishlist
+      summary: to fetch wishlist details
+      parameters:
+        - name: userId
+          in: path
+          type: integer
+          format: int64
+          required: true
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/ResponseSchema'
+
+
+
+definitions:
+  ResponseSchema:
+    properties:
+      message:
+        $ref: '#/definitions/TypeString'
+      result:
+        $ref: '#/definitions/ArraySchemaResp'
+      resultStr:
+        type: object
+      resultString:
+        $ref: '#/definitions/TypeString'
+      status:
+        $ref: '#/definitions/TypeString'
+      statusCode:
+        $ref: '#/definitions/TypeInt'
+  TypeString:
+    type: string
+  TypeInt:
+    type: integer
+    format: int32
+  TypeBoolean:
+    type: boolean
+  ArraySchemaResp:
+    type: array
+    items:
+      type: string
+      description: Id
+
+
+
+  WishlistSchema:
+    properties:
+      UserId:
+        type: integer
+        format: int32
+      productId:
+        type: string
+
+
+
+
