@@ -1,0 +1,24 @@
+
+
+ [
+         {
+    "productID": 1,
+    "name": "Memory card",
+    "price": 10000
+    },
+    {
+        "productID": 2,
+        "name": "Memory card",
+        "price": 10000
+        },
+        {
+            "productID": 3,
+            "name": "Memory card",
+            "price": 10000
+            },
+            {
+                "productID": 4,
+                "name": "Memory card",
+                "price": 10000
+                }
+]

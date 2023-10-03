@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>this is a Pipes</h1>
+  <fieldset>
+  <app-date-pipe></app-date-pipe>
+</fieldset>
+
+<fieldset>
+  <legend>This is a number pipe</legend>
+  <app-number-pipe></app-number-pipe>
+</fieldset>
+
+<fieldset>
+  <legend>This is a Slice pipe</legend>
+  <app-slice-pipe></app-slice-pipe>
+</fieldset>
+
+<fieldset>
+  <legend>This is a Json pipe</legend>
+  <app-json-pipe></app-json-pipe>
+</fieldset>
+
+<fieldset>
+  <legend>Custom Pipe</legend>
+  <h1>before:-{{name|custompipe}}</h1>
+  <h1>After:-{{title|custompipe}}</h1>
+</fieldset>
+
+<fieldset>
+  <legend>This is a Http Module</legend>
+  <app-http-example></app-http-example>
+  <h1></h1>
+</fieldset>
+
+
+</body>
+</html>

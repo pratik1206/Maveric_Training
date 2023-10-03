@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  
+   <app-parent-component></app-parent-component>
+
+  
+  <!-- <fieldset>
+    <legend>My Angular LifeCycle</legend>
+    <p>{{title}}</p>
+   <p>Counter value ={{counter}}</p>
+   
+    <button (click)="increment()">increment</button>
+    <button (click)="Decrement()">Decrement</button>
+     <app-child [count]="counter"></app-child>
+  </fieldset> -->
+
+  <!-- <fieldset>
+    <legend>Child To Parent Example</legend>
+    <h1>Welcome to {{title}}!</h1>
+    <p> current count is {{Counter}} </p>
+    <app-child-to-parents [count]=Counter (countChanged)="countChangedHandler($event)"></app-child-to-parents>
+</fieldset> -->
+
+<!-- 
+<div>  
+  <h2>Demonstrate ngSwitch</h2>  
+  <table style="width:100%;border:solid;border-color:blue;border-width:thin;">  
+      <thead>  
+          <tr >  
+              <td>Srl No</td>  
+              <td>Student Name</td>  
+              <td>Course</td>  
+              <td>Grade</td>  
+          </tr>  
+      </thead>  
+      <tbody>  
+          <tr *ngFor="let student of studentList;" [ngSwitch]="student.Grade">  
+              <td>  
+                  <span *ngSwitchCase="'A'" [ngStyle]="{'font-size':'18px','color':'red'}">{{student.SrlNo}}</span>  
+                  <span *ngSwitchCase="'B'" [ngStyle]="{'font-size':'16px','color':'blue'}">{{student.SrlNo}}</span>  
+                  <span *ngSwitchCase="'C'" [ngStyle]="{'font-size':'14px','color':'green'}">{{student.SrlNo}}</span>  
+                  <span *ngSwitchDefault [ngStyle]="{'font-size':'12px','color':'black'}">{{student.SrlNo}}</span>  
+              </td>  
+              <td>  
+                  <span *ngSwitchCase="'A'" [ngStyle]="{'font-size':'18px','color':'red'}">{{student.Name}}</span>  
+                  <span *ngSwitchCase="'B'" [ngStyle]="{'font-size':'16px','color':'blue'}">{{student.Name}}</span>  
+                  <span *ngSwitchCase="'C'" [ngStyle]="{'font-size':'14px','color':'green'}">{{student.Name}}</span>  
+                  <span *ngSwitchDefault [ngStyle]="{'font-size':'12px','color':'black'}">{{student.Name}}</span>  
+              </td>  
+              <td>  
+                  <span *ngSwitchCase="'A'" [ngStyle]="{'font-size':'18px','color':'red'}">{{student.Course}}</span>  
+                  <span *ngSwitchCase="'B'" [ngStyle]="{'font-size':'16px','color':'blue'}">{{student.Course}}</span>  
+                  <span *ngSwitchCase="'C'" [ngStyle]="{'font-size':'14px','color':'green'}">{{student.Course}}</span>  
+                  <span *ngSwitchDefault [ngStyle]="{'font-size':'12px','color':'black'}">{{student.Course}}</span>  
+              </td>  
+              <td>  
+                  <span *ngSwitchCase="'A'" [ngStyle]="{'font-size':'18px','color':'red'}">{{student.Grade}}</span>  
+                  <span *ngSwitchCase="'B'" [ngStyle]="{'font-size':'16px','color':'blue'}">{{student.Grade}}</span>  
+                  <span *ngSwitchCase="'C'" [ngStyle]="{'font-size':'14px','color':'green'}">{{student.Grade}}</span>  
+                  <span *ngSwitchDefault [ngStyle]="{'font-size':'12px','color':'black'}">{{student.Grade}}</span>  
+              </td>  
+          </tr>  
+      </tbody>  
+  </table>  
+</div> -->
+</body>
+</html>
