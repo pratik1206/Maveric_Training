@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.app-name {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.left-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.left-nav li {
+  margin-right: 1rem;
+}
+
+.left-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.left-nav a:hover {
+  text-decoration: underline;
+}
+nav{
+  margin-left: 10vw;
+}
+
+.dropdown-menu {
+
+  background-color: #dad5d5;
+  border: none;
+  left: auto;
+  right: 0;
+
+}
+
+
+
+.dropdown-menu li {
+
+  margin: 0;
+
+}
+
+
+
+.dropdown-menu a {
+
+  color: #0e0101;
+
+}
+
+
+
+.dropdown-menu a:hover {
+
+  background-color: #dad9d6;
+
+  color: #333333;
+
+}
+
+.left-nav, .nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown-toggle::after {
+  display: none !important; /* Use !important to override Bootstrap styles */
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu .non-clickable {
+  pointer-events: none; /* Disable pointer events */
+  cursor: default; /* Set default cursor */
+  padding-left: 20px;
+  font-size: 14px;
+
+}
+
+
+.button {
+	display: inline-block;
+	margin: 4px 2px;
+	background-color: #444;
+	font-size: 14px;
+	padding-left: 32px;
+	padding-right: 32px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.button:hover {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	background-color: white;
+	color: black;
+}
+
+.search-container {
+	position: relative;
+	display: inline-block;
+	margin: 4px 2px;
+	height: 50px;
+	width: 50px;
+	vertical-align: bottom;
+}
+
+.mglass {
+	display: inline-block;
+	pointer-events: none;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+}
+
+.searchbutton {
+	position: absolute;
+	font-size: 22px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.search:focus + .searchbutton {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	background-color: white;
+	color: black;
+}
+
+.search {
+	position: absolute;
+	left: 49px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+	background-color: white;
+	outline: none;
+    color: black;
+	border: none;
+	padding: 0;
+	width: 0;
+	height: 100%;
+	z-index: 10;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+
+.search:focus {
+	width: 363px; /* Bar width+1px */
+	padding: 0 16px 0 0;
+}
+
+.expandright {
+	left: auto;
+	right: 49px; /* Button width-1px */
+}
+
+.expandright:focus {
+	padding: 0 0 0 16px;
+}
+.badge.text-bg-secondary {
+	position: static;
+	top: 5%;
+	left: 92%;
+	transform: translate(-50%, -50%);
+	background-color: #f00; 
+	color: #fff; 
+	font-size: 12px; 
+	padding: 3px 6px; 
+	border-radius: 50%; 
+  }
+  

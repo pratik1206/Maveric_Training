@@ -1,0 +1,29 @@
+.page-not-found {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+}
+
+.content {
+
+    color: red;
+
+    text-align: center;
+
+}
+
+ 
+
+.content img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}

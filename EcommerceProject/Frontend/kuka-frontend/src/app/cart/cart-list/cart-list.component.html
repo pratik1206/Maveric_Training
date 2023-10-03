@@ -1,0 +1,116 @@
+
+<div class="MyKukacontainer">
+
+ 
+
+  <ng-container *ngIf="rowData===null; else cart">
+
+        <h2>Cart is Empty</h2>
+
+    </ng-container>
+
+    <ng-template #cart>
+
+  <div class="MyKukacontainer-content">
+
+   <div class="Lcart">
+
+     <table class="table">
+
+       <tbody>
+
+         <div class = "tbody-Wrapper">
+
+         <tr class="tbody-content" *ngFor="let cartItem of rowData">
+
+           <div class = "productImage">
+
+             <img src="../../assets/{{getImagebyProductId(cartItem.productId)}}.jpg" width="100" height="60">
+
+           </div>
+
+           <td>{{ getProductById(cartItem.productId) }}</td>
+
+           <td>
+
+             <button (click)="decreaseQuantity(cartItem)">-</button>
+
+             {{ cartItem.quantity }}
+
+             <button (click)="increaseQuantity(cartItem)">+</button>
+
+           </td>
+
+           <td>{{ cartItem.price }}</td>
+
+           <td>
+
+             <button (click)="deleteRecord(cartItem.cart_id)" class="delete-button">
+
+               <svg xmlns="http://www.w3.org/2000/svg" widtd="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+
+                 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+
+                 <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+
+               </svg>
+
+             </button>
+
+           </td>
+
+         </tr>
+
+         </div>
+
+       </tbody>
+
+     </table>
+
+   </div>
+
+   <div class="checkout">
+
+     <div class="checkout-Header">Cart total</div>
+
+     <table class="table">
+
+       <tr>
+
+         <td>Subtotal</td>
+
+         <td>{{ cartService.estimatedTotalAmount }}</td>
+
+       </tr>
+
+       <tr class="divider-row">
+
+         <td colspan="2"></td>
+
+       </tr>
+
+       <tr>
+
+         <td>Estimated Total</td>
+
+         <td>{{ cartService.estimatedTotalAmount }}</td>
+
+       </tr>
+
+<td>
+
+</td>
+
+</table>
+
+<button (click)="placeOrder(cartService.estimatedTotalAmount)" style="background-color: rgb(255, 88, 0)"class="orange-button ">Order</button>
+
+</div>
+
+</div>
+
+</ng-template>
+
+</div>
+
+ 

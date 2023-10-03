@@ -1,0 +1,163 @@
+/* Adjustments for the .page-container */
+/* Center the .page-container and increase the content size */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 50px); /* Adjust the height to leave space for header and footer */
+  background-color: #f7f7f7;
+  padding: 30px;
+}
+
+/* Styling for the .single-product container */
+.single-product {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%; /* Adjust the width as needed */
+  max-width: 1200px; /* Add a maximum width for better responsiveness */
+  height: auto; /* Let the height adjust based on content */
+  display: flex;
+  flex-wrap: wrap; /* Allow columns to wrap if necessary */
+}
+
+/* Styling for the product image */
+.product-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* height: auto;
+    max-width: 100%; */
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+}
+
+/* Styling for the small product images */
+.small-img-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--lwc-spacingMedium);
+    width: 100%;
+    overflow: auto;
+}
+
+.small-img-col {
+    text-align: center;
+    /* max-width: 50%; */
+    flex: 0 0 25%;
+    overflow: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+    padding: 5px;
+}
+.col-2{
+  flex: 1 1 auto;
+}
+
+/* Styling for the first .col-2 div (60% width) */
+.col-2:first-child {
+  flex: 0 0 65%;  /*  0 0 calc(100% - 10px); 60% width, don't grow or shrink */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Styling for the second .col-2 div (40% width) */
+.col-2:last-child {
+  flex: 0 0 35%; /* 0 0 calc(100% - 10px); 35% width, don't grow or shrink */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Styling for buttons and text */
+h3, p, h5 {
+  margin: 10px 0;
+}
+
+/* Styling for quantity buttons */
+.btn-group button {
+  font-size: 18px;
+  padding: 8px 16px;
+  background-color: grey; /* Set the background color to grey or your desired color */
+  color: black; /* Set the text color to black or a contrasting color */
+  border: none; /* Remove the button border */
+}
+
+.btn-group button:hover {
+  background-color: rgba(128, 128, 128, 0.772); /* Change the background color on hover */
+}
+
+/* Styling for "Add to Cart" and "Add to Wishlist" buttons */
+.btn.btn-danger {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Additional styling as needed */
+
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive styles for specific screen sizes */
+@media screen and (max-width: 768px) {
+  /* Adjust styles for screens up to 768px wide (e.g., tablets and smaller) */
+  /* .single-product {
+    width: 90%;
+    max-width: 90%; /* Adjust the maximum width for smaller screens */
+  /* } */ 
+  .single-product {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+    align-items: center; /* Center-align the content */
+  }
+
+  /* Reset the width of the second .col-2 div to 100% on smaller screens */
+  .col-2:last-child {
+    flex: 0 0 100%; /* Take up full width on smaller screens */
+    padding: 10px; /* Adjust the padding as needed */
+  }
+  
+  /* Add specific styles for smaller screens here */
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust styles for screens up to 480px wide (e.g., mobile devices) */
+  .single-product {
+    width: 90%;
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+  }
+  
+  /* Add specific styles for mobile screens here */
+}
+
+.arrow-image {
+  width: 30px; /* Set your desired fixed width */
+  height: 30px; /* Set your desired fixed height */
+  max-width: 50px; /* Allow the images to scale down */
+  max-height: 50px; /* Maintain the aspect ratio */
+}
+.quantity {
+  display: inline-block; /* Ensure the quantity is displayed on the same line */
+  width: 20px; /* Adjust the width to your preference */
+  text-align: center; /* Center the quantity within the span */
+  margin: 0 5px; /* Add some space between the quantity and buttons */
+}
+.btn-group {
+  display: flex;
+  align-items: center;
+}

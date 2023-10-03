@@ -1,0 +1,42 @@
+<div class="page-container">
+  <div class="container-x single-product">
+  
+    <div *ngIf="selectedProduct" class="row">
+  
+        <div class="col-2">
+  
+            <div class="card">
+              <div class="card-body">
+                  <img src='./assets/images/left_arrow.jpg' (click)="previousImage()" class="arrow-image">
+                  <img [src]="productImages[selectedImageIndex]" alt="{{ selectedProduct.name }}" class="product-image"/>
+                  <img src='./assets/images/right_arrow.jpg' (click)="nextImage()" class="arrow-image">
+              </div>
+            </div>
+          <div class="small-img-row">
+              <div class="small-img-col" *ngFor="let img of productImages; let i = index" (click)="selectedImageIndex = i">
+                  <img [src]="img" alt="{{ selectedProduct.name }}" class="small-product-image" width="100%"/>
+              </div>
+          </div>
+  
+        </div> 
+        
+        <div class="col-2">
+            <h3>{{ selectedProduct.name }}</h3>
+            <p>Article No: {{ selectedProduct.productId }}</p>
+            <h5>Description:</h5>
+            <p>{{ selectedProduct.description }}</p>
+            <p>Price: {{ selectedProduct.price | currency }}</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+            <button class="btn btn-primary" (click)="decreaseQuantity()">-</button>
+            <span class="quantity">{{ quantity }}</span>
+            <button class="btn btn-primary" (click)="increaseQuantity()">+</button>
+            </div><br/>
+            <button class="btn btn-warning" style="background-color: rgb(255, 88, 0);" (click)="addToCart(selectedProduct,quantity)">Add to Cart</button><br/>
+            <button class="btn btn-warning" style="background-color: rgb(255, 88, 0);" (click)="addToWishlist(selectedProduct,quantity)">Add to list</button>
+        </div>
+  
+    </div>
+  
+  </div>
+  </div>
+  

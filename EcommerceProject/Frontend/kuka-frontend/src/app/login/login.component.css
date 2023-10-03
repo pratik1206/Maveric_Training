@@ -1,0 +1,15 @@
+/* login.component.css */
+.container {
+    padding-top: 20px;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    background-color: coral;
+    width: 50%;
+    margin-left: 25%;
+
+  }

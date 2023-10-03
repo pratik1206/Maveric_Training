@@ -1,0 +1,32 @@
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4 my-2" *ngFor="let product of products">
+      <a [routerLink]="['/product', product.productId]">
+        <div class="card mb-2" style="width: 100%; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; background-color: aliceblue;">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4"> 
+                <div class="productImage">
+                  <img src="../../assets/{{ getImagebyProductId(product.productId)}}.jpg" width="100" height="120">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <h5 class="card-title" style="font-weight: bold;">{{ getProductById(product.productId) }}</h5>
+                <p class="card-text">Quantity: {{ product.quantity }}</p>
+                <p class="card-text">SerialNo: {{ product.serialNo }}</p>
+                <button class="btn btn-warning" routerLink="/wishlist" (click)="deleteproduct(product.productId)">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="container my-5" *ngIf="products.length === 0">
+  <div class="row justify-content-center">
+    <div class="col-md-3 text-center bg-warning text-white p-3 rounded" style="font-size: 24px;">
+      <p>"wishlist is empty!"</p>
+    </div>
+  </div>
+</div>
